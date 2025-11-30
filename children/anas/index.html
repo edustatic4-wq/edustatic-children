@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anas's Learning Portal | EduStatic</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container { max-width: 900px; margin: 0 auto; text-align: center; }
+        .avatar {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 6px solid white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            object-fit: cover;
+            margin-bottom: 25px;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        .welcome {
+            font-family: 'Fredoka One', cursive;
+            font-size: 48px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 20px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 40px;
+        }
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        .game-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+        .game-icon { font-size: 60px; margin-bottom: 15px; }
+        .game-title {
+            font-family: 'Fredoka One', cursive;
+            font-size: 24px;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        .game-desc { color: #666; font-size: 14px; }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid rgba(255,255,255,0.2);
+        }
+        .footer-link {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 25px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+        .footer-link:hover { background: rgba(255,255,255,0.3); }
+        .footer-text {
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://i.ibb.co/GQn70Bs2/anas-avatar.png" alt="Anas" class="avatar" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle fill=%22%23667eea%22 cx=%2250%22 cy=%2250%22 r=%2250%22/><text x=%2250%22 y=%2265%22 font-size=%2240%22 text-anchor=%22middle%22 fill=%22white%22>😊</text></svg>'">
+        
+        <h1 class="welcome">Hi, Anas! 👋</h1>
+        <p class="subtitle">Choose a game to start your learning adventure!</p>
+        
+        <div class="games-grid">
+            <a href="games/magic-e-wizard.html" class="game-card">
+                <div class="game-icon">🧙‍♂️</div>
+                <h3 class="game-title">Magic E Wizard</h3>
+                <p class="game-desc">Transform words with the power of Magic E!</p>
+            </a>
+            
+            <a href="games/letter-hunt.html" class="game-card">
+                <div class="game-icon">⚡</div>
+                <h3 class="game-title">Letter Hunt</h3>
+                <p class="game-desc">Catch the falling letters before they disappear!</p>
+            </a>
+            
+            <a href="games/cvc-burger.html" class="game-card">
+                <div class="game-icon">🍔</div>
+                <h3 class="game-title">CVC Burger</h3>
+                <p class="game-desc">Build yummy burgers while learning words!</p>
+            </a>
+        </div>
+        
+        <div class="footer">
+            <a href="https://www.edustatic.com" target="_blank" class="footer-link">✨ Visit EduStatic.com</a>
+            <p class="footer-text">Where Every Child Becomes the Hero 🦸</p>
+        </div>
+    </div>
+    
+    <script src="config.js"></script>
+</body>
+</html>
